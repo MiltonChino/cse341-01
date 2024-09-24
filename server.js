@@ -2,15 +2,15 @@ const express = require("express");
 const app = express();
 
 const routes = require("express").Router();
+const port = 3000;
 
 app.get("/", (req, res) => {
   res.send("Hello Maria Martinez");
 });
+app.get("/helaman", (req, res) => {
+  res.send("Hello Helaman");
+});
 
-const port = 3000;
-// app.listen(process.env.PORT || port, () => {
-//   console.log("Web Server is listening at port " + (process.env.PORT || port));
-// });
-app.listen(port, () => {
-  console.log("Web Server is listening at port " + port);
+app.listen(process.env.PORT || port, () => {
+  console.log("Web Server is listening at port " + (process.env.PORT || port));
 });
